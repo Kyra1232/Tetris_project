@@ -99,3 +99,23 @@ T = [['.....',
       '.00..',
       '..0..',
       '.....']]
+
+def main_menu(window):
+    run = True
+    while run:
+        draw_text_middle('Press any button to begin', 60, (255, 255, 255), window)
+        pygame.display.update()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+            if event.type == pygame.KEYDOWN:
+                main(window)
+
+    pygame.quit()
+
+
+if __name__ == '__main__':
+    win = pygame.display.set_mode((s_width, s_height))
+    pygame.display.set_caption('Tetris')
+    main_menu(win)
