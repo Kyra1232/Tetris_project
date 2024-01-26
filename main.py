@@ -1,3 +1,7 @@
+import random
+import pygame
+
+
 S = [['.....',
       '.....',
       '..00.',
